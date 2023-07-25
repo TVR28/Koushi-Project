@@ -60,7 +60,7 @@ if file is not None:
     i = 1
     #convert pdf to images ---->  Place inside a button
     if st.session_state.conv == True: #Only happens once
-        pages = convert_from_path(file.name, 500,poppler_path=r'C:\Program Files\poppler-23.07.0\Library\bin')
+        pages = convert_from_path(file.name, 500)
         for page in pages:
             page.save(f'{fname}_page{i}.jpg', 'JPEG')
             i+=1
